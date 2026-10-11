@@ -80,11 +80,9 @@ js/
 developer.paypal.com > Apps & Credentials > Sandbox > create an app > copy the Client ID into `PAYPAL_CLIENT_ID`.
 Pay with a sandbox buyer account (developer.paypal.com > Testing Tools > Sandbox Accounts).
 
-Limits you should know about (and can mention in your presentation):
-- The payment is confirmed in the browser only. A real shop verifies it on a server.
-- Refunds are not automatic. When an admin rejects a paid order or approves a return, the page reminds them to refund in PayPal.
 
-## Other limits
+
+## limits
 
 - Everything is stored in each visitor's own browser, so every visitor has their own data.
 - Passwords are stored as plain text and page protection is done in the browser. This is fine for a class project and not for a real shop (a real backend hashes passwords and checks permissions on the server).
