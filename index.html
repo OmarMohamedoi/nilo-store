@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nilo</title>
+</head>
+<body>
+  <p>Loading... <a href="login.html">Continue to Nilo</a></p>
+  <script>
+    // Logged in? Go to your home page. Otherwise go to the login page.
+    var target = "login.html";
+    try {
+      var u = JSON.parse(localStorage.getItem("currentUser"));
+      if (u && u.role) target = u.role === "admin" ? "admin-products.html" : "shop.html";
+    } catch (e) {}
+    location.replace(target);
+  </script>
+</body>
+</html>

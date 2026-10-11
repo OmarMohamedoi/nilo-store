@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admins · Nilo Admin</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b4f4a'/%3E%3Ctext x='30' y='45' font-size='40' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3En%3C/text%3E%3Ccircle cx='47' cy='43' r='4.5' fill='%23ff6b3d'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main class="container">
+    <div class="page-head"><h1>Admins</h1></div>
+
+    <section class="card">
+      <h2>Add another admin</h2>
+      <form id="admin-form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" />
+            <small class="error" id="error-name"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" />
+            <small class="error" id="error-email"></small>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" type="password" autocomplete="new-password" />
+            <small class="error" id="error-password"></small>
+          </div>
+          <div class="field">
+            <label for="confirm">Confirm password</label>
+            <input id="confirm" type="password" autocomplete="new-password" />
+            <small class="error" id="error-confirm"></small>
+          </div>
+        </div>
+        <p id="form-msg" class="msg" style="margin-top:12px"></p>
+        <div class="form-actions"><button type="submit" class="btn btn-primary">Add admin</button></div>
+      </form>
+    </section>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>ID</th><th>Name</th><th>Email</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="js/core/ui.js"></script>
+  <script src="js/core/db.js"></script>
+  <script src="js/core/auth.js"></script>
+  <script src="js/core/validators.js"></script>
+  <script src="js/pages/admin-admins.js"></script>
+</body>
+</html>

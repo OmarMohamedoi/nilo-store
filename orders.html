@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My orders · Nilo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b4f4a'/%3E%3Ctext x='30' y='45' font-size='40' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3En%3C/text%3E%3Ccircle cx='47' cy='43' r='4.5' fill='%23ff6b3d'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main class="container">
+    <div class="page-head"><h1>My orders</h1></div>
+    <p id="success-msg" class="msg"></p>
+    <div id="orders"></div>
+  </main>
+
+  <dialog class="modal" id="return-dialog">
+    <form class="modal-body" id="return-form" novalidate>
+      <h2>Request a return</h2>
+      <p class="muted" id="return-label"></p>
+      <div class="field">
+        <label for="return-reason">Reason</label>
+        <select id="return-reason">
+          <option value="">Choose a reason</option>
+          <option>Item damaged</option>
+          <option>Wrong item received</option>
+          <option>Not as described</option>
+          <option>Changed my mind</option>
+          <option>Other</option>
+        </select>
+        <small class="error" id="error-reason"></small>
+      </div>
+      <div class="field">
+        <label for="return-note">Details (optional, required for "Other")</label>
+        <textarea id="return-note" maxlength="300"></textarea>
+        <small class="error" id="error-note"></small>
+      </div>
+      <p class="msg" id="return-message"></p>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Send request</button>
+        <button type="button" class="btn" id="return-cancel">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/core/ui.js"></script>
+  <script src="js/core/db.js"></script>
+  <script src="js/core/auth.js"></script>
+  <script src="js/core/validators.js"></script>
+  <script src="js/components/reviews.js"></script>
+  <script src="js/pages/orders.js"></script>
+</body>
+</html>

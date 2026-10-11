@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop · Nilo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b4f4a'/%3E%3Ctext x='30' y='45' font-size='40' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3En%3C/text%3E%3Ccircle cx='47' cy='43' r='4.5' fill='%23ff6b3d'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main class="container">
+    <section class="hero">
+      <span class="hero-tag">New arrivals</span>
+      <h1>Everything you need, in one place.</h1>
+      <p>Browse the catalogue, save favourites and check out in seconds.</p>
+    </section>
+
+    <div class="toolbar">
+      <input id="search" class="grow" type="search" placeholder="Search by name" aria-label="Search by name" />
+      <select id="category-filter" aria-label="Category"></select>
+      <input id="min-price" type="number" min="0" placeholder="Min price" aria-label="Minimum price" style="width:120px" />
+      <input id="max-price" type="number" min="0" placeholder="Max price" aria-label="Maximum price" style="width:120px" />
+      <select id="sort" aria-label="Sort">
+        <option value="">Sort by</option>
+        <option value="price-asc">Price: low to high</option>
+        <option value="price-desc">Price: high to low</option>
+        <option value="rating">Best rated</option>
+        <option value="name">Name A-Z</option>
+      </select>
+      <button class="btn" id="clear-filters">Clear</button>
+    </div>
+    <p class="result-count" id="result-count"></p>
+
+    <div class="grid" id="products"></div>
+    <div class="pager" id="pager"></div>
+  </main>
+
+  <script src="js/core/ui.js"></script>
+  <script src="js/core/db.js"></script>
+  <script src="js/core/auth.js"></script>
+  <script src="js/components/cart-controls.js"></script>
+  <script src="js/core/validators.js"></script>
+  <script src="js/components/reviews.js"></script>
+  <script src="js/pages/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login · Nilo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b4f4a'/%3E%3Ctext x='30' y='45' font-size='40' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3En%3C/text%3E%3Ccircle cx='47' cy='43' r='4.5' fill='%23ff6b3d'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-wrap">
+    <section class="auth-side">
+      <div class="auth-logo">nilo<span>.</span></div>
+      <h2>Welcome back</h2>
+      <p>Pick up where you left off. Your cart, wish list and orders are waiting.</p>
+      <ul class="perks"><li>Secure PayPal checkout</li><li>Easy 14-day returns</li><li>Real customer reviews</li></ul>
+    </section>
+    <section class="auth-main">
+    <div class="auth-card">
+      <h1 class="auth-brand">nilo<span>.</span></h1>
+      <h2>Log in to your account</h2>
+      <p id="success-msg" class="msg"></p>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" autocomplete="email" placeholder="name@mail.com" />
+          <small class="error" id="error-email"></small>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" />
+          <small class="error" id="error-password"></small>
+        </div>
+        <p id="error-form" class="msg"></p>
+        <button type="submit" class="btn btn-accent btn-block">Login</button>
+      </form>
+
+      <p class="auth-foot">No account yet? <a href="register.html">Create one</a></p>
+      <p class="hint">Demo admin: admin@shop.com / Admin123</p>
+    </div>
+    </section>
+  </main>
+
+  <script src="js/core/ui.js"></script>
+  <script src="js/core/db.js"></script>
+  <script src="js/pages/login.js"></script>
+</body>
+</html>

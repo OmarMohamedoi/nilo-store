@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create account · Nilo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b4f4a'/%3E%3Ctext x='30' y='45' font-size='40' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3En%3C/text%3E%3Ccircle cx='47' cy='43' r='4.5' fill='%23ff6b3d'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-wrap">
+    <section class="auth-side">
+      <div class="auth-logo">nilo<span>.</span></div>
+      <h2>Join Nilo</h2>
+      <p>Create a free account to save favourites, track orders and leave reviews.</p>
+      <ul class="perks"><li>Secure PayPal checkout</li><li>Easy 14-day returns</li><li>Real customer reviews</li></ul>
+    </section>
+    <section class="auth-main">
+    <div class="auth-card">
+      <h1 class="auth-brand">nilo<span>.</span></h1>
+      <h2>Create your account</h2>
+
+      <form id="register-form" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" autocomplete="name" />
+          <small class="error" id="error-name"></small>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" autocomplete="email" placeholder="name@mail.com" />
+          <small class="error" id="error-email"></small>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="new-password" />
+          <small class="error" id="error-password"></small>
+        </div>
+        <div class="field">
+          <label for="confirm">Confirm password</label>
+          <input id="confirm" type="password" autocomplete="new-password" />
+          <small class="error" id="error-confirm"></small>
+        </div>
+        <p id="error-form" class="msg"></p>
+        <button type="submit" class="btn btn-accent btn-block">Register</button>
+      </form>
+
+      <p class="auth-foot">Already have an account? <a href="login.html">Log in</a></p>
+      <p class="hint">Password: at least 8 characters with a letter and a number.</p>
+    </div>
+    </section>
+  </main>
+
+  <script src="js/core/ui.js"></script>
+  <script src="js/core/db.js"></script>
+  <script src="js/core/validators.js"></script>
+  <script src="js/pages/register.js"></script>
+</body>
+</html>
